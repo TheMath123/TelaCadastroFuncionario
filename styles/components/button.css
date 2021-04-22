@@ -1,0 +1,26 @@
+.btnSave {
+  height: 36px;
+  width: 113px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 4px;
+
+  padding: 10px;
+
+  background: var(--blue);
+
+  transition: 0.2s;
+}
+
+.btnSave:hover{
+  background: var(--dark-blue);
+}
+
+.btnSave img{
+  margin-right: 10px;
+}

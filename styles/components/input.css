@@ -1,0 +1,56 @@
+:root{
+  --line-height: 15px;
+}
+
+.input-group {
+  position: relative;
+
+  font-family: Roboto;
+  font-size: 1rem;
+
+}
+
+.input-group .input-area {
+  outline: none;
+  border: 1px solid var(--text-highlight);
+  border-radius: 4px;
+
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: var(--line-height);
+}
+
+.input-group .input-area:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.input-group .input-area:valid + .label {
+  top: -8px;
+  padding: 0 3px;
+  font-size: 14px;
+}
+
+.input-group .input-area:focus {
+  border: 1px solid var(--blue);
+}
+
+.input-group .label {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  top: 10px;
+  left: 13px;
+  background: var(--white);
+  color: var(--text-highlight);
+}
+
+.input-group .input-area:focus + .label {
+  top: -8px;
+  padding: 0 3px;
+  font-size: 14px;
+  color: var(--blue);
+}

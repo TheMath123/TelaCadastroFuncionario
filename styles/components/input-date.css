@@ -1,0 +1,63 @@
+.input-group-date {
+  position: relative;
+
+  font-family: Roboto;
+  font-size: 1rem;
+
+}
+
+.input-group-date .input-area-date {
+  outline: none;
+  border: 1px solid var(--text-highlight);
+  border-radius: 4px;
+  
+  padding-left: 16px;
+  padding-right: 12px;
+  
+  font-family: Roboto;
+  font-size: 1rem;
+  color: var(--text-highlight);
+  line-height: 15px;
+
+  background: var(--white)
+}
+
+.input-group-date .input-area-date:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.input-group-date .input-area-date:valid + .label-date {
+  top: -8px;
+  padding: 0 3px;
+  font-size: 14px;
+}
+
+.input-group-date .input-area-date:focus {
+  border: 1px solid var(--blue);
+}
+
+.input-group-date .label-date {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  top: 10px;
+  left: 13px;
+  background: var(--white);
+  color: var(--text-highlight);
+}
+
+.input-group-date .input-area-date:focus + .label-date {
+  top: -8px;
+  padding: 0 3px;
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.iconDate {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}

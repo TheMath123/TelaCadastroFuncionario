@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sunny.GeCom | Cadastro Funcionário</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/pages/main.css">
+  <link rel="stylesheet" href="styles/components/header.css">
+  <link rel="stylesheet" href="styles/components/input.css">
+  <link rel="stylesheet" href="styles/components/input-date.css">
+  <link rel="stylesheet" href="styles/components/select.css">
+  <link rel="stylesheet" href="styles/components/button.css">
+  <link rel="stylesheet" href="styles/components/switch.css">
+  <link rel="stylesheet" href="styles/components/modal.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="sideLeft">
+      <a class="menu btnRef">
+          <img src="/assets/icons/menu.svg" alt="Menu" title="Menu" >
+      </a>
+      <img 
+        class="logoSuny"
+        src="/assets/img/logo-suny.png"
+        srcset="/assets/img/logo-suny@2x.png 2x, /assets/img/logo-suny@3x.png 3x"
+      >
+      <span class="titulo labelHeader">Cadastro de funcionário</span>
+    </div>
+    <div class="sideRight">
+      <a id="reset" onclick="resetTimeCardModal()" class="btnRef">
+        <img 
+          class="iconReset"
+          src="/assets/icons/reset.svg"
+          alt="Restar senha ponto"
+          title="Resetar senha do cartão de ponto"
+        >
+      </a>
+      <a id="close" onclick="" class="btnRef">
+        <img class="iconClose" src="/assets/icons/close.svg" alt="Fechar" title="Fechar">
+      </a>
+    </div>
+  </header>
+
+  <div class="main">
+    <form class="container" onsubmit="salvarForm()">
+  
+      <div class="contentData">
+        <h1 class="sub-titulo">Dados Pessoais</h1>
+        <div class="line-div"></div>
+  
+        <div class="line-one">
+          <div class="input-group">
+            <input type="text" class="input-area lineInputOne" required id="nome"/>
+            <label for="nome" class="label">Nome completo</label>
+          </div>
+        </div>
+  
+        <div class="line-two">
+          <div class="input-group">
+            <input type="text" class="input-area" required id="cpf"/>
+            <label for="cpf" class="label">CPF</label>
+          </div>
+  
+          <div class="input-group-date">
+            <input type="date" class="input-area-date" required id="data-nasc"/>
+            <label for="data-nasc" class="label-date">Data de nascimento</label>
+          </div>
+    
+          <div class="input-group">
+            <input type="text" class="input-area" required id="profissão"/>
+            <label for="profissão" class="label">Profissão</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="contentData">
+        <h1 class="sub-titulo">Contato</h1>
+        <div class="line-div"></div>
+  
+        <div class="line-one">
+          <div class="input-group">
+            <input type="email" class="input-area lineInputOne" required id="email"/>
+            <label for="email" class="label">Email</label>
+          </div>
+        </div>
+  
+        <div class="line-two">
+          <div class="input-group">
+            <input type="tel" class="input-area" required id="telefone1"/>
+            <label for="telefone1" class="label">Telefone</label>
+          </div>
+    
+          <div class="input-group">
+            <input type="tel" class="input-area" required id="telefone2"/>
+            <label for="telefone2" class="label">Telefone</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="contentData">
+        <h1 class="sub-titulo">Endereço</h1>
+        <div class="line-div"></div>
+  
+        <div class="line-one">
+          <div class="input-group">
+            <input type="text" class="input-area lineInputOne" required id="endereco"/>
+            <label for="endereco" class="label">Endereço</label>
+          </div>
+  
+          <div class="input-group">
+            <input type="text" class="input-area" required id="cep"/>
+            <label for="cep" class="label">CEP</label>
+          </div>
+        </div>
+  
+        <div class="line-two">
+          <div class="input-group">
+            <input type="text" class="input-area" required id="bairro"/>
+            <label for="bairro" class="label">Bairro</label>
+          </div>
+    
+          <div class="input-group">
+            <input type="text" class="input-area" required id="cidade"/>
+            <label for="cidade" class="label">Cidade</label>
+          </div>
+  
+          <div class="select-group">
+            <select name="estado" id="estado" title="Escolha o estado">
+              <option class="label">Estado</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      <div class="contentData">
+        <h1 class="sub-titulo">Contratação</h1>
+        <div class="line-div"></div>
+  
+        <div class="line-one">
+          <div class="select-group">
+            <select name="tipo" id="tipo" title="Escolha o tipo" onchange="alteraTipo()">
+              <option class="label">Tipo</option>
+            </select>
+          </div>
+  
+          <div id="percentualDiv" class="componentsPercentual"> 
+            <div class="boxComissao">
+              <span class="texto-highlight">Comissão</span>
+              <label class="switch">
+                <input ref type="checkbox" id="on" onchange="switchPerc()"/>
+                <div class="slider"></div>
+              </label>
+            </div>
+  
+            <div id="percentual" class="input-group" title="Percentual de comissão">
+              <input type="number" class="input-area" required id="lblPerc" disabled/>
+              <label for="lblPerc" class="label">Percetual</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="line-two">
+          <div class="input-group-date">
+            <input type="date" class="input-area-date" required id="data-contratacao"/>
+            <label for="data-contratacao" class="label-date">Data da contratação</label>
+          </div>
+  
+          <div class="select-group">
+            <select name="escala" id="escala" title="Escolha a escala de trabalho">
+              <option class="label">Escala de trabalho</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <button type="submit" class="button btnSave" id="save">
+          <img src="assets/icons/save.svg" >
+          SALVAR
+        </button>
+      </footer>
+      
+    </form>
+
+    <div id="modalReset" class="modalResetTimeCard">
+      <div class="overlay"></div>
+      <div class="boxMessage">
+        <strong class="button">Resetar senha do cartão de ponto</strong>
+        <span class="sub-titulo">Deseja resetar sua senha?</span>
+        <div class="modalButtons button">
+          <button class="btnModalYes" onclick="resetTimeCard()">SIM</button>
+          <button class="btnModalCancel" onclick="resetTimeCardModal()">CANCELAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+</html>

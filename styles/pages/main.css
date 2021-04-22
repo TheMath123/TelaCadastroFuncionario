@@ -1,0 +1,102 @@
+.container {
+  background: var(--white);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px 23px;
+}
+
+h1{
+  padding-left: 6px;
+}
+
+.line-div{
+  width: 100%;
+  border-bottom: 1px solid var(--text-highlight);
+  margin: 6px 0 19px 0;
+}
+
+.contentData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 40px;
+  color: var(--text);
+}
+
+select {
+  height: 40px;
+  color: var(--text);
+}
+
+
+.line-one{
+  display:flex;
+  flex-direction: row;
+
+  gap: 55px;
+  margin-bottom: 16px;
+}
+.line-two {
+  display:flex;
+  flex-direction: row;
+
+  gap: 55px;
+  margin-bottom: 27px;
+}
+
+.line-two input{
+  width: 200px;
+}
+
+.lineInputOne {
+  width: 455px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#percentualDiv {
+  display: none;
+}
+
+.componentsPercentual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxComissao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin-right: 1rem;
+}
+
+.boxComissao span{
+  margin-bottom: 4px;
+}
+
+@media(max-width: 780px) {
+  .line-two,
+  .line-one{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .boxComissao {
+    margin-left: 0;
+  }
+}

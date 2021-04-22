@@ -1,0 +1,55 @@
+header {
+  display: flex;
+  flex-direction: row;
+  background: var(--blue);
+  justify-content: space-between;
+}
+
+.sideLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.logoSuny {
+  width: 130.4px;
+  height: 50px;
+  flex-grow: 0;
+  margin: 0 23px;
+  object-fit: contain;
+
+  transition: flex-wrap display 0.5;
+}
+
+@media(max-width: 680px){
+  .labelHeader {
+    display: none;
+  }
+}
+
+.labelHeader {
+  font-size: 24px;
+  color: var(--light-blue-light);
+}
+
+/* Botões */
+.menu {
+  margin-left: 23px;
+}
+
+.btnRef:hover {
+  transition: 0.2s;
+  filter: brightness(85%);
+  cursor: pointer;
+}

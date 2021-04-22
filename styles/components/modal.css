@@ -1,0 +1,74 @@
+.modalResetTimeCard{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--white);
+  opacity: 0.75;
+}
+
+.boxMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  position: absolute;
+
+  width: 320px;
+  height: 140px;
+
+  flex-grow: 0;
+  padding: 19px 10px 18px 12px;
+
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2),
+  0 1px 18px 0 rgba(0, 0, 0, 0.12),
+  0 6px 10px 0 rgba(0, 0, 0, 0.14);
+
+  background-color: var(--white);
+}
+
+.boxMessage .modalButtons{
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.boxMessage strong{
+  text-transform: uppercase;
+  color: var(--title);
+  letter-spacing: 1.25px;
+  margin-bottom: 21px;
+}
+
+.boxMessage span {
+  margin-bottom: 23px;
+}
+
+.modalButtons button{
+  border: 0;
+  margin: 0 16px;
+
+  background: transparent;
+
+  color: var(--blue);
+  letter-spacing: 1.25px;
+  font-weight: bold;
+}
+
+.modalButtons button:hover {
+  color: var(--dark-blue);
+}
+
+.modalButtons button:active {
+  color: var(--text-highlight);
+}
