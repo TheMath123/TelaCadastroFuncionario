@@ -12,8 +12,8 @@ Tela de formulário de cadastro de funcionário.
 ### Diferencial
 - Inspiração do Material Design da Google
 - Técnicas de UX
-- Responsividade de 80% em dispositivos mobile
-- Responsividade de 100% em computadores e tablet
+- Responsividade de 80% em dispositivos smartphones
+- Responsividade de 100% em computadores e tablets
 
 ### Imagens
 ![Home](https://i.imgur.com/CX1DcAW.png)
