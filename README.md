@@ -15,7 +15,7 @@ Tela de formulário de cadastro de funcionário.
 - Responsividade de 80% em dispositivos smartphones
 - Responsividade de 100% em computadores e tablets
 
-Template da interface feito no [Figma.](https://www.figma.com/file/qeRIpXEaRp5L2exhOYNQwS/CadastroFuncionario?node-id=0%3A1)
+Template da interface feito no <a target="_blank" href="https://www.figma.com/file/qeRIpXEaRp5L2exhOYNQwS/CadastroFuncionario?node-id=0%3A1)">Figma.</a>
 
 ### Imagens
 ![Home](https://i.imgur.com/CX1DcAW.png)
